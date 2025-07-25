@@ -301,15 +301,15 @@ body {
 }
 
 .score-card.player1 {
-    border: 3px solid #87CEEB;
+    border: 6px solid #87CEEB;
 }
 
 .score-card.player2 {
-    border: 3px solid #FFB6C1;
+    border: 6px solid #FFB6C1;
 }
 
 .player-section {
-    border: 3px solid;
+    border: 6px solid;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 30px;
@@ -627,19 +627,9 @@ body {
     </div>
 
     <div class="game-menu">
-        <div class="player-inputs-container">
-            <div class="player-input-group">
-                <label id="player1-label">👤 플레이어1 이름:</label>
-                <input id="player1Input" type="text" placeholder="선공" maxlength="10" />
-            </div>
-            <div class="player-input-group">
-                <label id="player2-label">👤 플레이어2 이름:</label>
-                <input id="player2Input" type="text" placeholder="후공" maxlength="10" />
-            </div>
-        </div>
-
+        
         <div class="target-input-container">
-            <label id="target-label">🎯 목표 숫자:</label>
+            <label id="target-label">🎯 목표 숫자를 변경하고 싶으면 여기에서 변경하세요.</label>
             <input id="targetInput" type="number" value="20" min="1" max="100" />
         </div>
 
@@ -776,22 +766,14 @@ body {
         if (lang === 'ko') {
             koreanDesc.classList.remove('hidden');
             englishDesc.classList.add('hidden');
-            targetLabel.textContent = '🎯 목표 숫자:';
-            player1Label.textContent = '👤 플레이어1 이름:';
-            player2Label.textContent = '👤 플레이어2 이름:';
-            player1Input.placeholder = '선공';
-            player2Input.placeholder = '후공';
+            targetLabel.textContent = '🎯 목표 숫자를 변경하고 싶으면 여기에 쓰세요.';
             startText.textContent = '게임 시작';
             koBtn.classList.add('active');
             enBtn.classList.remove('active');
         } else {
             koreanDesc.classList.add('hidden');
             englishDesc.classList.remove('hidden');
-            targetLabel.textContent = '🎯 Target Number:';
-            player1Label.textContent = '👤 Player 1 Name:';
-            player2Label.textContent = '👤 Player 2 Name:';
-            player1Input.placeholder = 'First Player';
-            player2Input.placeholder = 'Second Player';
+            targetLabel.textContent = '🎯 If you want to change the target number, please write it here.“​​​​​​​​​​​​​';
             startText.textContent = 'Start Game';
             koBtn.classList.remove('active');
             enBtn.classList.add('active');
@@ -902,22 +884,7 @@ body {
     };
 
     const startGame = () => {
-        // 플레이어 이름 유효성 검사
-        const player1Input = document.getElementById('player1Input').value.trim();
-        const player2Input = document.getElementById('player2Input').value.trim();
         
-        if (!player1Input || !player2Input) {
-            if (currentLanguage === 'ko') {
-                alert('두 플레이어의 이름을 모두 입력해주세요!');
-            } else {
-                alert('Please enter names for both players!');
-            }
-            return;
-        }
-
-        player1Name = player1Input;
-        player2Name = player2Input;
-
         targetNumber = Number(document.getElementById('targetInput').value);
         currentRound = 1;
         player1Score = 0;
@@ -1127,10 +1094,6 @@ body {
         isBuildingNumber1 = false;
         isBuildingNumber2 = false;
         
-        // 입력 필드 초기화
-        document.getElementById('player1Input').value = '';
-        document.getElementById('player2Input').value = '';
-        document.getElementById('targetInput').value = 20;
         
         // 버튼 상태 복원
         document.getElementById('player1ActionButtons').style.opacity = '1';

@@ -116,9 +116,12 @@ allowing players to choose based on their skill and learning level.---
 
 ---
 
-### 🧪 한수수의  게임들 |  Games by Soosoo Han
+## 🌟 Soosooland - Game Demo Hub by Han Soosoo
 
-➡️ [https://soosoohan.github.io/soosooland](https://soosoohan.github.io/soosooland)
+ "Learning through fun, and fun through learning."
+
+Explore more brain games and puzzles in **[Soosooland](https://soosoohan.github.io/soosooland/)**    
+— a digital playground designed to improve memory, logic, and creativity while having fun!
 
 ---
 

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넘플초</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* {margin: 0;padding: 0;box-sizing: border-box;}
+body {font-family: 'Pretendard', sans-serif;background: #145454;min-height: 100vh;display: flex;justify-content: center;align-items: center;padding: 10px;}
+.blackboard {width: 100%;max-width: 750px;min-height: 100vh;background: #145454;position: relative;padding: 10px;overflow-x: hidden;}
+.chalk-text {color: #f0f8ff;font-family: 'Pretendard', sans-serif;}
+.main-title {position: absolute;top: 2%;left: 50%;transform: translateX(-50%);font-size: clamp(1.3rem, 3.7vw, 1.9rem);font-weight: bold;text-align: center;margin-bottom: 4px;width: 100%;padding: 0 10px;}
+.game-description {position: relative;top: auto;left: auto;width: 90%;max-width: 500px;color: #f0f8ff;font-size: clamp(0.9rem, 2.5vw, 1.1rem);text-align: left;z-index: 10;line-height: 1.3;margin-bottom: 20px;padding: 0 10px;}
+.game-description h3 {color: #add8e6;margin-bottom: 8px;font-size: clamp(0.9rem, 2.5vw, 1.1rem);border-bottom: 2px solid #add8e6;padding-bottom: 3px;}
+.game-description p {margin-bottom: 12px;font-size: clamp(0.9rem, 2.5vw, 1.1rem);}
+.game-description ul {margin-bottom: 12px;padding-left: 15px;font-size: clamp(0.9rem, 2.5vw, 1.1rem);}
+.game-description li {margin-bottom: 6px;font-size: clamp(0.9rem, 2.5vw, 1.1rem);}
+.game-menu {position: relative;top: auto;right: auto;display: flex;flex-direction: column;gap: 15px;align-items: center;width: 90%;max-width: 400px;font-size: clamp(1rem, 3vw, 1.3rem);background: rgba(255, 255, 255, 0.1);padding: 20px;border-radius: 15px;backdrop-filter: blur(10px);margin: 0 auto;}
+.target-input-container {width: 100%;text-align: center;}
+.target-input-container label {display: block;font-size: clamp(1rem, 3vw, 1.3rem);color: white;font-weight: bold;margin-bottom: 10px;}
+.target-input-container input {width: 100%;max-width: 200px;padding: 12px;border: 2px solid #add8e6;border-radius: 8px;font-size: clamp(1rem, 3vw, 1.3rem);text-align: center;background: white;}
+.button-container {display: flex;gap: 15px;justify-content: center;width: 100%;}
+.main-game-button {background: rgba(255,255,255,0.9);color: #2e8b8b;padding: 15px 25px;border: none;border-radius: 10px;font-size: clamp(1rem, 3vw, 1.3rem);font-family: 'Pretendard', sans-serif;cursor: pointer;transition: all 0.3s ease;box-shadow: 0 4px 10px rgba(0,0,0,0.2);min-width: 100px;text-align: center;flex: 1;}
+.main-game-button:hover {background: #f0f8ff;transform: translateY(-3px);box-shadow: 0 6px 15px rgba(0,0,0,0.3);}
+.main-game-button:disabled {background: rgba(255,255,255,0.5);cursor: not-allowed;transform: none;}
+.hidden {display: none !important;}
+.operator-card {background: #fff3cd !important;color: #d84315 !important;font-size: clamp(1.5rem, 4.0vw, 2.0rem) !important;border: 2px solid #ffc107 !important;}
+.operator-card.used {background: #f0f0f0 !important;border-color: #ccc !important;}
+.operator-card:hover:not(.used) {background: #fff3cd !important;border-color: #ffb300 !important;}
+.game-container {width: 100%;max-width: 1200px;margin: 0 auto;padding: 10px;background: #145454;min-height: 100vh;}
+.game-header {text-align: center;margin-bottom: 20px;}
+.game-header h1 {font-size: clamp(1.3rem, 3.7vw, 1.9rem);color: white;margin-bottom: 10px;}
+.game-header p {font-size: clamp(1rem, 3vw, 1.3rem);color: #ffeb3b;}
+.score-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));gap: 10px;margin-bottom: 20px;font-size: clamp(1rem, 3vw, 1.3rem);}
+.score-card {text-align: center;padding: 15px;background: rgba(255,255,255,0.9);border-radius: 10px;box-shadow: 0 2px 8px rgba(0,0,0,0.1);font-size: clamp(1rem, 3vw, 1.3rem);}
+.score-card.player1 {border: 6px solid #87CEEB;}
+.score-card.player2 {border: 6px solid #FFB6C1;}
+.player-section {border: 6px solid;border-radius: 15px;padding: 20px;margin-bottom: 30px;}
+.player1-section {border-color: #87CEEB;}
+.player2-section {border-color: #FFB6C1;}
+.player1-section .cards-area .card-button {border-color: #87CEEB;}
+.player2-section .cards-area .card-button {border-color: #FFB6C1;}
+.player1-section .expression-area {border-color: #87CEEB;}
+.player2-section .expression-area {border-color: #FFB6C1;}
+.cards-section {margin-bottom: 20px;font-size: clamp(1rem, 3vw, 1.3rem);}
+.cards-section h3 {font-size: clamp(1rem, 3vw, 1.3rem);color: white;margin-bottom: 10px;}
+.cards-area {display: grid;grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));gap: 6px;max-width: 100%;}
+.card-button {background: white;border: 2px solid #add8e6;border-radius: 8px;padding: 12px 8px;font-size: clamp(1rem, 3vw, 1.3rem);font-weight: bold;cursor: pointer;transition: all 0.2s ease;height: 50px;width: 50px;display: flex;align-items: center;justify-content: center;}
+.card-button:hover:not(.used) {background: #f0f8ff;transform: translateY(-2px);}
+.card-button:disabled {cursor: not-allowed;transform: none;}
+.card-button.used {background: #d3d3d3 !important;border-color: #999 !important;color: #666 !important;cursor: not-allowed;opacity: 0.5;}
+.expression-area {background: white;padding: 15px;border: 3px solid #add8e6;border-radius: 10px;font-size: clamp(1rem, 3vw, 1.3rem);margin-bottom: 20px;min-height: 60px;display: flex;align-items: center;word-break: break-all;}
+.action-buttons {display: flex;gap: 10px;justify-content: center;margin-bottom: 20px;flex-direction: row;align-items: center;flex: 1;max-width: none;}
+.result-area {background: rgba(255,255,255,0.9);padding: 20px;border-radius: 10px;text-align: center;margin-bottom: 20px;}
+.result-area h2 {font-size: clamp(1.2rem, 3.5vw, 1.5rem);margin-bottom: 15px;color: #333;}
+.result-area p {font-size: clamp(1rem, 3vw, 1.3rem);margin-bottom: 10px;color: #555;}
+.bottom-buttons {display: flex;justify-content: center;gap: 10px;flex-direction: row;}
+.current-turn {background: #ffeb3b;padding: 15px;border-radius: 10px;text-align: center;margin-bottom: 20px;font-size: clamp(1rem, 3vw, 1.3rem);font-weight: bold;color: #333;}
+.winner-highlight {background: #4caf50;color: white;}
+.tie-highlight {background: #ff9800;color: white;}
+    </style>
+</head>
+<body>
+    <div class="blackboard">
+        <div id="startScreen">
+            <h1 class="chalk-text main-title">넘플초</h1>
+
+<br><br>
+
+<div class="game-description chalk-text">
+    <h3>📋 게임 규칙</h3>
+    <ul>
+        <li>넘플초는 두 플레이어가 주어진 숫자 3장과 연산기호 2장을 이용하여 목표 숫자에 가장 가까운 결과를 만드는 게임입니다.</li>
+        <li>수식의 결과가 목표 숫자에 더 가까운 플레이어가 10점을 받습니다.</li>
+        <li>목표 숫자를 설정하고 게임을 시작합니다.</li>
+        <li>모든 카드를 사용하지 않아도 됩니다.</li>
+        <li>각 플레이어는 동시에 수식을 만들고 제출할 수 있습니다.</li>
+    </ul>
+</div>
+
+<div class="game-menu">
+    <div class="target-input-container">
+        <label>🎯 목표 숫자를 변경할 수 있어요.</label>
+        <input id="targetInput" type="number" value="20" min="1" max="100" />
+    </div>
+
+<div class="button-container">
+    <button class="main-game-button" onclick="startGame()">
+        <span>🎮 게임 시작</span>
+    </button>
+</div>
+
+
+</div>
+
+</div>
+
+<!-- 게임 화면 -->
+
+<div id="gameScreen" class="hidden">
+    <div class="game-container">
+        <div class="game-header">
+            <h1>넘플초</h1>
+            <p>🎯 목표 숫자: <span id="targetDisplay" class="font-bold"></span></p>
+        </div>
+
+<div class="current-turn" id="currentTurn">
+    준비되셨나요? 새 라운드를 시작합니다.
+</div>
+
+<div class="score-grid">
+    <div class="score-card">
+        <h3>라운드</h3>
+        <p id="roundDisplay"></p>
+    </div>
+    <div class="score-card player1">
+        <h3>플레이어 1</h3>
+        <p id="player1Score">0</p>
+    </div>
+    <div class="score-card player2">
+        <h3>플레이어 2</h3>
+        <p id="player2Score">0</p>
+    </div>
+</div>
+
+<!-- 플레이어1 영역 -->
+<div class="player-section player1-section">
+    <div class="cards-section">
+        <h3>플레이어 1의 카드:</h3>
+        <div id="player1CardsArea" class="cards-area"></div>
+    </div>
+
+    <div class="cards-section">
+        <div id="player1Expression" class="expression-area">
+            플레이어 1이 카드를 클릭하여 수식을 만드세요
+        </div>
+    </div>
+
+    <div id="player1ActionButtons" class="action-buttons">
+        <button onclick="submitExpression(1)" class="main-game-button">
+            ✅ 제출
+        </button>
+        <button onclick="resetExpression(1)" class="main-game-button">
+            🔄 초기화
+        </button>
+    </div>
+</div>
+
+<!-- 플레이어2 영역 -->
+<div class="player-section player2-section">
+    <div class="cards-section">
+        <h3>플레이어 2의 카드:</h3>
+        <div id="player2CardsArea" class="cards-area"></div>
+    </div>
+
+    <div class="cards-section">
+        
+        <div id="player2Expression" class="expression-area">
+            플레이어 2가 카드를 클릭하여 수식을 만드세요
+        </div>
+    </div>
+
+    <div id="player2ActionButtons" class="action-buttons">
+        <button onclick="submitExpression(2)" class="main-game-button">
+            ✅ 제출
+        </button>
+        <button onclick="resetExpression(2)" class="main-game-button">
+            🔄 초기화
+        </button>
+    </div>
+</div>
+
+<div id="nextRoundArea" class="hidden action-buttons">
+    <button onclick="nextRound()" class="main-game-button">
+        ➡️ 다음 라운드
+    </button>
+</div>
+
+<div id="resultArea" class="hidden result-area">
+    <h2>게임 종료!</h2>
+    <p>최종 점수</p>
+    <p>플레이어 1: <span id="finalPlayer1Score"></span>점</p>
+    <p>플레이어 2: <span id="finalPlayer2Score"></span>점</p>
+    <p id="gameWinner" class="text-lg font-bold mt-4"></p>
+</div>
+
+<div class="bottom-buttons">
+    <button onclick="backToStart()" class="main-game-button">
+        ⚙️ 설정으로
+    </button>
+    <button onclick="location.href='index.html'" class="main-game-button">
+        🏠 홈으로
+    </button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+    let isBuildingNumber1 = false;
+    let isBuildingNumber2 = false;
+
+    let targetNumber = 20;
+    let currentRound = 1;
+    let player1Score = 0;
+    let player2Score = 0;
+    let player1Cards = [];
+    let player2Cards = [];
+    let player1Expression = '';
+    let player2Expression = '';
+    let player1ExpressionText = '';
+    let player2ExpressionText = '';
+    let player1Submitted = false;
+    let player2Submitted = false;
+
+    const createNumberDeck = () => {
+        const deck = [];
+        for (let num = 1; num <= 20; num++) {
+            deck.push(num);
+        }
+        return deck;
+    };
+
+    const createOperatorDeck = () => {
+        const deck = [];
+        deck.push('+');
+        deck.push('-');
+        return deck;
+    };
+
+    const shuffleAndDraw = (deck, count) => {
+        const shuffled = [...deck].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    };
+
+    const generateCards = () => {
+        const numberDeck = createNumberDeck();
+        const operatorDeck = createOperatorDeck();
+        
+        const numbers = shuffleAndDraw(numberDeck, 3);
+        const operators = shuffleAndDraw(operatorDeck, 2);
+        
+        return [...numbers, ...operators].map(value => ({ value, used: false }));
+    };
+
+    const renderCards = (player) => {
+        const cardsArea = document.getElementById(`player${player}CardsArea`);
+        const cards = player === 1 ? player1Cards : player2Cards;
+        
+        cardsArea.innerHTML = '';
+        cards.forEach((cardObj) => {
+            const btn = document.createElement('button');
+            btn.className = 'card-button';
+
+            let displayText = cardObj.value;
+            
+            if (displayText === '+' || displayText === '-') {
+                btn.classList.add('operator-card');
+            }
+
+            if (cardObj.used) {
+                btn.classList.add('used');
+                btn.disabled = true;
+            }
+            
+            btn.textContent = displayText;
+            btn.onclick = () => {
+                const submitted = player === 1 ? player1Submitted : player2Submitted;
+                if (!submitted && !cardObj.used) {
+                    let expression = player === 1 ? player1ExpressionText : player2ExpressionText;
+                    let isBuildingNumber = player === 1 ? isBuildingNumber1 : isBuildingNumber2;
+                    
+                    if (!isNaN(cardObj.value)) {
+                        expression += cardObj.value;
+                        isBuildingNumber = false;
+                    } else {
+                        expression += displayText;
+                        isBuildingNumber = false;
+                    }
+                    
+                    if (player === 1) {
+                        player1ExpressionText = expression;
+                        isBuildingNumber1 = isBuildingNumber;
+                    } else {
+                        player2ExpressionText = expression;
+                        isBuildingNumber2 = isBuildingNumber;
+                    }
+                    
+                    document.getElementById(`player${player}Expression`).textContent = expression;
+                    cardObj.used = true;
+                    renderCards(player);
+                }
+            };
+            cardsArea.appendChild(btn);
+        });
+    };
+
+    const startGame = () => {
+        targetNumber = Number(document.getElementById('targetInput').value);
+        currentRound = 1;
+        player1Score = 0;
+        player2Score = 0;
+        player1Submitted = false;
+        player2Submitted = false;
+        player1ExpressionText = '';
+        player2ExpressionText = '';
+        isBuildingNumber1 = false;
+        isBuildingNumber2 = false;
+
+        player1Cards = generateCards();
+        player2Cards = generateCards();
+
+        document.getElementById('targetDisplay').textContent = targetNumber;
+        document.getElementById('roundDisplay').textContent = `${currentRound} / 10`;
+        document.getElementById('player1Score').textContent = player1Score;
+        document.getElementById('player2Score').textContent = player2Score;
+
+        renderCards(1);
+        renderCards(2);
+        document.getElementById('player1Expression').textContent = '플레이어 1은 카드를 클릭하여 수식을 만드세요';
+        document.getElementById('player2Expression').textContent = '플레이어 2는 카드를 클릭하여 수식을 만드세요';
+
+        document.getElementById('startScreen').classList.add('hidden');
+        document.getElementById('gameScreen').classList.remove('hidden');
+    };
+
+    const submitExpression = (player) => {
+        const expression = player === 1 ? player1ExpressionText : player2ExpressionText;
+        
+        if (!expression) {
+            alert(`플레이어 ${player}이(가) 수식을 만들어주세요!`);
+            return;
+        }
+
+        try {
+            const evalExpression = expression;
+            const result = eval(evalExpression);
+
+            if (player === 1) {
+                player1Expression = expression;
+                player1Submitted = true;
+                document.getElementById('player1Expression').textContent = `${expression} = ${result}`;
+                document.getElementById('player1ActionButtons').style.opacity = '0.5';
+                document.getElementById('player1ActionButtons').style.pointerEvents = 'none';
+            } else {
+                player2Expression = expression;
+                player2Submitted = true;
+                document.getElementById('player2Expression').textContent = `${expression} = ${result}`;
+                document.getElementById('player2ActionButtons').style.opacity = '0.5';
+                document.getElementById('player2ActionButtons').style.pointerEvents = 'none';
+            }
+
+            if (player1Submitted && player2Submitted) {
+                calculateRoundScore();
+                
+                if (currentRound === 10) {
+                    document.getElementById('finalPlayer1Score').textContent = player1Score;
+                    document.getElementById('finalPlayer2Score').textContent = player2Score;
+                    
+                    const winnerText = document.getElementById('gameWinner');
+                    if (player1Score > player2Score) {
+                        winnerText.textContent = '🎉 플레이어 1 승리!';
+                    } else if (player2Score > player1Score) {
+                        winnerText.textContent = '🎉 플레이어 2 승리!';
+                    } else {
+                        winnerText.textContent = '🤝 무승부!';
+                    }
+                    
+                    document.getElementById('resultArea').classList.remove('hidden');
+                } else {
+                    document.getElementById('nextRoundArea').classList.remove('hidden');
+                }
+            } else {
+                const waitingPlayer = player === 1 ? '플레이어 2' : '플레이어 1';
+                document.getElementById('currentTurn').textContent = `${waitingPlayer}의 제출을 기다리고 있습니다...`;
+            }
+        } catch {
+            alert('올바른 수식을 입력해주세요!');
+        }
+    };
+
+    const calculateRoundScore = () => {
+        try {
+            const player1Result = eval(player1Expression);
+            const player2Result = eval(player2Expression);
+            
+            const diff1 = Math.abs(targetNumber - player1Result);
+            const diff2 = Math.abs(targetNumber - player2Result);
+            
+            if (diff1 < diff2) {
+                player1Score += 10;
+                document.getElementById('currentTurn').textContent = '플레이어 1이 이번 라운드를 승리했습니다! (+10점)';
+            } else if (diff2 < diff1) {
+                player2Score += 10;
+                document.getElementById('currentTurn').textContent = '플레이어 2가 이번 라운드를 승리했습니다! (+10점)';
+            } else {
+                player1Score += 10;
+                player2Score += 10;
+                document.getElementById('currentTurn').textContent = '무승부! 양쪽 모두 10점을 받습니다!';
+            }
+            
+            document.getElementById('player1Score').textContent = player1Score;
+            document.getElementById('player2Score').textContent = player2Score;
+        } catch (error) {
+            console.error('점수 계산 오류:', error);
+        }
+    };
+
+    const nextRound = () => {
+        if (currentRound >= 10) return;
+        
+        currentRound++;
+        player1Submitted = false;
+        player2Submitted = false;
+        player1ExpressionText = '';
+        player2ExpressionText = '';
+        player1Expression = '';
+        player2Expression = '';
+        isBuildingNumber1 = false;
+        isBuildingNumber2 = false;
+
+        player1Cards = generateCards();
+        player2Cards = generateCards();
+
+        document.getElementById('roundDisplay').textContent = `${currentRound} / 10`;
+        document.getElementById('currentTurn').textContent = '새 라운드가 시작되었습니다!';
+        
+        renderCards(1);
+        renderCards(2);
+        document.getElementById('player1Expression').textContent = '플레이어 1은 카드를 클릭하여 수식을 만드세요';
+        document.getElementById('player2Expression').textContent = '플레이어 2는 카드를 클릭하여 수식을 만드세요';
+        
+        document.getElementById('player1ActionButtons').style.opacity = '1';
+        document.getElementById('player1ActionButtons').style.pointerEvents = 'auto';
+        document.getElementById('player2ActionButtons').style.opacity = '1';
+        document.getElementById('player2ActionButtons').style.pointerEvents = 'auto';
+        
+        document.getElementById('nextRoundArea').classList.add('hidden');
+    };
+
+    const resetExpression = (player) => {
+        const submitted = player === 1 ? player1Submitted : player2Submitted;
+        if (!submitted) {
+            if (player === 1) {
+                player1ExpressionText = '';
+                isBuildingNumber1 = false;
+                player1Cards.forEach(card => card.used = false);
+                document.getElementById('player1Expression').textContent = '플레이어 1은 카드를 클릭하여 수식을 만드세요';
+            } else {
+                player2ExpressionText = '';
+                isBuildingNumber2 = false;
+                player2Cards.forEach(card => card.used = false);
+                document.getElementById('player2Expression').textContent = '플레이어 2는 카드를 클릭하여 수식을 만드세요';
+            }
+            renderCards(player);
+        }
+    };
+
+    const backToStart = () => {
+        targetNumber = 20;
+        currentRound = 1;
+        player1Score = 0;
+        player2Score = 0;
+        player1Cards = [];
+        player2Cards = [];
+        player1Expression = '';
+        player2Expression = '';
+        player1ExpressionText = '';
+        player2ExpressionText = '';
+        player1Submitted = false;
+        player2Submitted = false;
+        isBuildingNumber1 = false;
+        isBuildingNumber2 = false;
+        
+        document.getElementById('player1ActionButtons').style.opacity = '1';
+        document.getElementById('player1ActionButtons').style.pointerEvents = 'auto';
+        document.getElementById('player2ActionButtons').style.opacity = '1';
+        document.getElementById('player2ActionButtons').style.pointerEvents = 'auto';
+        
+        document.getElementById('nextRoundArea').classList.add('hidden');
+        document.getElementById('resultArea').classList.add('hidden');
+        
+        document.getElementById('startScreen').classList.remove('hidden');
+        document.getElementById('gameScreen').classList.add('hidden');
+    };
+</script>
+
+</body>
+</html>

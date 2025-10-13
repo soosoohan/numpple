@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://numpple.vercel.app/</loc>
-    <lastmod>2025-10-08</lastmod>
+    <loc>https://soosoohan.github.io/numpple</loc>
+    <lastmod>2025-10-13</lastmod>
   </url>
-</urlset>
+  <url>
+    <loc>https://soosoohan.github.io/numpple/numpplecho-ko.html</loc>
+    <lastmod>2025-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://soosoohan.github.io/numpple/numpplecho-en.html</loc>
+    <lastmod>2025-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://soosoohan.github.io/numpple/numpplejam-ko.html</loc>
+    <lastmod>2025-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://soosoohan.github.io/numpple/numpplejam-en.html</loc>
+    <lastmod>2025-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://soosoohan.github.io/numpple/numpple-ko.html</loc>
+    <lastmod>2025-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://soosoohan.github.io/numpple/numpple-en.html</loc>
+    <lastmod>2025-10-13</lastmod>
+  </url>
+  </urlset>

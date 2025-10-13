@@ -68,7 +68,7 @@
         background: #2e8b8b;
         position: relative;
         overflow-y: auto;
-        max-width: 800px;
+        max-width: 750px;
         margin: 0 auto;
     }
 
@@ -319,7 +319,7 @@
 
     .square-button {
             width: 250px;
-            height: 45px;
+            height: 90px;
             background-color: #FFB3D9; /* 연분홍 */
             color: white;
             border: none;
@@ -346,7 +346,7 @@
     .square-button:active {
         transform: scale(0.95);
     }
-.credits {
+    .credits {
         margin-top: 50px;
         font-size: 0.9em;
         color:white;
@@ -459,38 +459,38 @@
 
 </head>
 <body>
-    <button class="back-button" onclick="goBack()" style="display: none;">← 뒤로가기</button>
+    <button class="back-button" onclick="goBack()" style="display: none;">← 뒤로가기/ ← Back </button>
 
 
 <div class="blackboard">
     <!-- 첫 번째 페이지: 게임 선택 -->
     <div id="page1" class="page active">
         <div class="container">
-            <h1> 넘플 </h1>
+            <h1> 넘플 NUMPPLE</h1>
 
             <div class="description">
                 <strong>두 사용자가  숫자카드와 연산기호 카드로 이용해서 수식을 만드세요.</strong><br>
-                 수식으로 무엇을 만들까요? 원하는 플레이 방식을 선택하세요!
+                 수식으로 무엇을 만들까요? 원하는 플레이 방식을 선택하세요!<br> Create expressions using number cards and opration symbol cards. <br> Choose your preferred play style!
             </div>
 
             <div class="selection-container">
                 <div class="selection-row">
                     <button class="selection-button" onclick="goToPage2()">
                         <span class="emoji">🏆</span>
-                        목표숫자 만들기
-                        <div class="subtitle">넘플</div>
+                        목표숫자 만들기<br>Make Target Number
+                        <div class="subtitle">넘플 Numpple</div>
                     </button> 
                     
-                    <button class="selection-button" onclick="location.href='https://numpplex.vercel.app'">
+                    <button class="selection-button" onclick="location.href='https://soosoohan.github.io/numpplex'">
                         <span class="emoji">🏆</span>
-                        최대값 만들기 <br> 최소값 만들기
-                        <div class="subtitle">넘플X </div>
+                        최대값 만들기 <br> 최소값 만들기 <br>Make Max/min Values
+                        <div class="subtitle">넘플X NUMPPLE X</div>
                     </button>
                 </div>
             </div>
 <div class="credits">       
 <button class="square-button" onclick="location.href='https://soosoohan.github.io/soosooland/'">
-    즐거운 퍼즐, 수수랜드
+    즐거운 퍼즐, 수수랜드<br> Fun Puzzles, Soosooland
 </button>
 <p> © 2025 Soosoo Han. All rights reserved.</p>
     </div>
@@ -526,13 +526,13 @@
         </ul>
 
         <div class="button-container">
-            <button class="main-game-button" onclick="location.href='NP1.html'">
+            <button class="main-game-button" onclick="location.href='numpplecho-ko.html'">
                 넘플초 쉬움
             </button>
-            <button class="main-game-button" onclick="location.href='NP2.html'">
+            <button class="main-game-button" onclick="location.href='numpplejam-ko.html'">
                 넘플잼 보통
             </button>
-            <button class="main-game-button" onclick="location.href='NP3.html'">
+            <button class="main-game-button" onclick="location.href='numpple-ko.html'">
                 넘플 어려움
             </button>
                     
@@ -555,13 +555,13 @@
                 </ul>
 
                 <div class="button-container">
-                    <button class="main-game-button" onclick="location.href='NP1.html'">
+                    <button class="main-game-button" onclick="location.href='numpplecho-en.html'">
                         NUMPPLE CHO
                     </button>
-                    <button class="main-game-button" onclick="location.href='NP2.html'">
+                    <button class="main-game-button" onclick="location.href='numpplejam-en.html'">
                         NUMPPLE JAM
                     </button>
-                    <button class="main-game-button" onclick="location.href='NP3.html'">
+                    <button class="main-game-button" onclick="location.href='numpple-en.html'">
                         NUMPPLE
                     </button>
                 </div>

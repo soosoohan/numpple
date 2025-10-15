@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://soosoohan.github.io/numpple</loc>
+    <loc>https://soosooland.com/numpple</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://soosoohan.github.io/numpple/numpplecho-ko.html</loc>
+    <loc>https://soosooland.com/numpple/numpplecho-ko.html</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soosoohan.github.io/numpple/numpplecho-en.html</loc>
+    <loc>https://soosooland.com/numpple/numpplecho-en.html</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soosoohan.github.io/numpple/numpplejam-ko.html</loc>
+    <loc>https://soosooland.com/numpple/numpplejam-ko.html</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soosoohan.github.io/numpple/numpplejam-en.html</loc>
+    <loc>https://soosooland.com/numpple/numpplejam-en.html</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soosoohan.github.io/numpple/numpple-ko.html</loc>
+    <loc>https://soosooland.com/numpple/numpple-ko.html</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soosoohan.github.io/numpple/numpple-en.html</loc>
+    <loc>https://soosooland.com/numpple/numpple-en.html</loc>
     <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  </urlset>
+</urlset>

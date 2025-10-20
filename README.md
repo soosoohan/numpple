@@ -105,22 +105,14 @@ This is planned for future development.​​​​​​​​​​​​​�
 Each version differs not only in difficulty, but also in available operations, card usage rules, and overall game flexibility.    
 allowing players to choose based on their skill and learning level.---
 
+Play Numpple : https://soosooland.com/numpple/
 ---
 
-## 📅 개발 타임라인 / Development Timeline
-
-- 2025-07-15 
-* 첫 번째 프로토타입 완성 후 [`/numpple`](https://soosoohan.github.io/numpple) 레포에 업로드.  실질적인 초기 완성 단계.  
-* First prototype completed and uploaded to the [`/numpple`](https://soosoohan.github.io/numpple) repository.  
-  
-
----
-
-## 🌟 Soosooland - Game Demo Hub by Han Soosoo
+## 🌟 Soosooland - Game  Hub by Han Soosoo
 
  "Learning through fun, and fun through learning."
 
-Explore more brain games and puzzles in **[Soosooland](https://soosoohan.github.io/soosooland/)**    
+Explore more brain games and puzzles in **[Soosooland](https://soosooland.com/)**    
 — a digital playground designed to improve memory, logic, and creativity while having fun!
 
 ---

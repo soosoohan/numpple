@@ -5,15 +5,15 @@
 Numpple is a name that combines Number and Apple.
 Numpple is a spin-off game of Numzzle, and unlike Numzzle where you compete against NPCs, two users compete against each other.
 
->---
->
-> 🛡️ **이 게임은 저작권 등록이 완료되었습니다.**  
-> 무단 복제, 무단 이용, 상업적 사용은 법적 책임을 초래할 수 있습니다.  
->  
-> 🛡️ **This game has been officially copyright registered.**  
-> Unauthorized reproduction, use, or commercial distribution may result in legal consequences.  
->
-> ----
+---
+
+ 🛡️ **이 게임은 저작권 등록이 완료되었습니다.**  
+ 무단 복제, 무단 이용, 상업적 사용은 법적 책임을 초래할 수 있습니다.  
+  
+ 🛡️ **This game has been officially copyright registered.**  
+ Unauthorized reproduction, use, or commercial distribution may result in legal consequences.  
+
+ ----
 
 
 ## 🎮 게임 개요 | Game Overview
@@ -105,6 +105,7 @@ This is planned for future development.​​​​​​​​​​​​​�
 Each version differs not only in difficulty, but also in available operations, card usage rules, and overall game flexibility.    
 allowing players to choose based on their skill and learning level.---
 
+---
 Play Numpple : https://soosooland.com/numpple/
 ---
 

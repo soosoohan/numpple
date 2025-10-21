@@ -109,7 +109,7 @@ allowing players to choose based on their skill and learning level.---
 Play Numpple : https://soosooland.com/numpple/
 ---
 
-## 🌟 Soosooland - Game  Hub by Han Soosoo
+## 🌟 Soosooland - Puzzle Game Hub by Han Soosoo
 
  "Learning through fun, and fun through learning."
 

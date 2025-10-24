@@ -96,7 +96,7 @@ body {font-family: 'Pretendard', sans-serif;background: #145454;min-height: 100v
         <li>두 장의 카드를 놓아 두 자리 수를 만들 수 있습니다.</li>
         <li>각 플레이어는 동시에 수식을 만들고 제출할 수 있습니다.</li>
         <li>넘플은 덧셈(+)과 뺄셈(-)과 곱셈(x)과 나눗셈 (÷) 연산기호를 사용합니다. </li>
-        <li>초등학교 4학년 이상에게 권장합니다.</li>
+        <li>초등학교 4학년 이상이면 게임할 수 있습니다.</li>
         <li>목표숫자에 가까이 가기 위한 수식을 만들기 위해 최선의 수식을 찾아보세요. </li>
  </ul>
 </div>
@@ -106,14 +106,11 @@ body {font-family: 'Pretendard', sans-serif;background: #145454;min-height: 100v
         <label>🎯 목표 숫자를 변경할 수 있어요.</label>
         <input id="targetInput" type="number" value="20" min="1" max="100" />
     </div>
-
-```
 <div class="button-container">
     <button class="main-game-button" onclick="startGame()">
         <span>🎮 게임 시작</span>
     </button>
 </div>
-```
 
 </div>
 
@@ -217,13 +214,9 @@ body {font-family: 'Pretendard', sans-serif;background: #145454;min-height: 100v
         🏠 홈으로
     </button>
 </div>
-```
-
-</div>
-
 </div>
 </div>
-
+</div>
 <script>
     let isBuildingNumber1 = false;
     let isBuildingNumber2 = false;

@@ -232,8 +232,26 @@
         transform: translateY(-3px);
         box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
-    /* 게임 허브 화면 */
+ 
+  .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #FFD6BA;
+        color: #7A2E2E;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
 
+    .back-button:hover {
+        background-color: #FF9494;
+        color: white;
+    }
     .hidden {
         display: none;
     }
@@ -343,8 +361,6 @@
         }
     }
 </style>
-
-
 </head>
 <body>
     <button class="back-button" onclick="location.href='https://soosooland.com/'">

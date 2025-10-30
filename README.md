@@ -141,7 +141,7 @@ This project is registered with the Korea Copyright Commission.
 
 —-
 
-## Play Numpple : https://soosooland.com/numpple/
+## Numpple : https://soosooland.com/numpple/
 
 ---
 ## 🌟 Soosooland - Puzzle Game Hub by Han Soosoo

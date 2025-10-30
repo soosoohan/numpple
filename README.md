@@ -1,114 +1,149 @@
-## 넘플 (Numpple) 
+## 🎯 넘즐 시리즈 /Numzzle series
 
-**넘플(Numpple)**은 **넘버(Number)**와 **사과(Apple)**을 결합한 이름입니다.  
-** 넘플은 넘즐의 스핀오프게임으로 npc 와 대결하는 넘즐과 다르게 두 사용자가 대결합니다.
-Numpple is a name that combines Number and Apple.
-Numpple is a spin-off game of Numzzle, and unlike Numzzle where you compete against NPCs, two users compete against each other.
+**넘즐(Numzzle)**은 **넘버(Number)**와 **퍼즐(Puzzle)**을 결합한 이름입니다.  
+**Numzzle** = Number + Puzzle
 
----
+또한 한글로는 “너무 즐겁다”는 말과 비슷해, 공부를 게임처럼 즐겁게 하자는 의미도 담고 있습니다.  
+In Korean, it also sounds like “Neomu Jeulgeopda,” meaning “so much fun.”
 
- 🛡️ **이 게임은 저작권 등록이 완료되었습니다.**  
- 무단 복제, 무단 이용, 상업적 사용은 법적 책임을 초래할 수 있습니다.  
-  
- 🛡️ **This game has been officially copyright registered.**  
- Unauthorized reproduction, use, or commercial distribution may result in legal consequences.  
+넘즐은 수학 감각과 창의력을 발휘해야 하는 재미있는 계산 게임입니다.  
+Numzzle is a fun and strategic math game that challenges your sense of numbers and creativity.
 
- ----
+숫자 카드와 연산 카드가 랜덤으로 주어집니다.  
+You receive random number and operator cards.
+
+한 라운드마다 주어진 카드로 수식을 만듭니다.   
+Each round, you build an expression using cards to get as close as possible to the target number.
+
+총 10라운드 동안 플레이하며 누적 점수로 승패를 결정합니다.  
+Play 10 rounds. The player with the highest total score wins.
 
 
-## 🎮 게임 개요 | Game Overview
+### 📌 게임 종류 비교
 
-넘플은 수학 감각과 창의력을 발휘해야 하는 재미있는 계산 게임입니다.  
-한 라운드마다 주어진 카드로 수식을 만들고,  
-**목표 숫자에 가장 가까운 값**을 만든 사람이 점수를 얻습니다.
+| 수식 결과 방식       | 👤🆚🤖컴퓨터와 대결   | 👤🆚👤사용자 2인 대결 |👤사용자 혼자하기|
+|------------------|--------------|----------------|----|
+| 🎯 목표값 맞추기     | 넘즐         | 넘플           |넘털|
+| 🧮 최대값 만들기    | 넘즐 X 맥스    | 넘플 X 맥스  | |
+| 🧮 최소값 만들기    | 넘즐 X 미니    | 넘플 X 미니    |  |
 
- Numpple is a fun and strategic math game  
- that challenges your sense of numbers and creativity.  
- Each round, you build an expression using cards to get  
- as close as possible to the **target number**.
+### 📌 Game Types Comparison
 
----
+|Formula Result Method |👤🆚🤖 vs Computer|👤🆚👤 2-Player Battle|👤 Solo Play|
+|----------------------|---------------|-------------------|-----------|
+|🎯 Hit the Target Value|Numzzle        |Numpple             |Numtter     |
+|🧮 Create Maximum Value|Numzzle X Max |Numpple X Max     |           |
+|🧮 Create Minimum Value|Numzzle X Mini |Numpple X Mini      |           |
 
-## 📋 공통 게임 규칙 | Common Game Rules
 
-- 목표 숫자를 설정하고 게임을 시작합니다.  
- Set a target number and start the game.
+### 🧩 연산기호 조합에 따른 시리즈 정리
 
-- 숫자 카드와 연산 카드가 랜덤으로 주어집니다.  
- You receive random number and operator cards.
+| 사용 연산기호              | 넘즐   👤🆚🤖                 | 넘플   👤🆚👤   |👤넘털|               
+|----------------|--------------------|------------------|----|
+| `+`, `-`    |넘즐초, 넘즐초맥스, 넘즐초미니      | 넘플초, 넘플초맥스, 넘플초미니      ||
+| `+`, `-`, `×`    | 넘즐잼, 넘즐잼맥스, 넘즐잼미니    | 넘플잼, 넘플잼맥스, 넘플잼미니      ||
+| `+`, `-`, `×`, `÷`     | 넘즐, 넘즐맥스, 넘즐미니   | 넘플, 넘플맥스, 넘플미니     ||
+| `+`, `-`, `×`, `÷`, `√`, `π` | **넘즐업** (아주 어려움)   | —    ||
+| `+`, `-`, `×`, `÷`, `(`, `)`|||넘털|
 
-- 연산 카드에는 +, −, ×, ÷ 등이 포함됩니다.  
- Operators include +, −, ×, ÷ 
+※ "잼"은 중간 난이도, "업"은 고난도 확장판을 의미합니다.    
 
-- 주어진 카드로 수식을 만들어 목표 숫자에 가장 가까운 값을 제출합니다.  
- Build an expression using the cards to get as close as possible to the target number.
+### 🧩 Series by Operation Symbol Combinations
 
-- 모든 카드를 사용하지 않아도 되며 숫자카드 1장만 사용해도 됩니다.
- You don’t have to use all cards, and you can use just one number card.​​​​​​​​​​​​​​​
+|Operations Used  |Numzzle   👤🆚🤖 |Numpple   👤🆚👤   |👤Numtter|
+|-----------|---------|----------|-------|
+|`+`, `-`   |Numzzle Cho, Numzzle Cho Max, Numzzle Cho Mini|Numpple Cho, Numpple Cho Max, Numpple Cho Mini     ||
+|`+`, `-`, `×`    |Numzzle Jam, Numzzle Jam Max, Numzzle Jam Mini|Numpple Jam, Numpple Jam Max, Numpple Jam Mini   ||
+|`+`, `-`, `×`, `÷`   |Numzzle, Numzzle Max, Numzzle Mini  |Numpple, Numpple Max, Numple Mini     ||
+|`+`, `-`, `×`, `÷`, `√`, `π`|**Numzzle Up** (Very Difficult)  |—      ||
+|`+`, `-`, `×`, `÷`, `(`, `)`       |||Numtter |
 
-- 두 사람이 대결하며, 수식 결과가 목표 숫자에 더 가까운 사람이 10점을 얻습니다.
-Two people compete against each other, and the person whose formula result is closer to the target value gets the point.​​​​​​​​​​​​​​​​
-
-- 실수했을 경우 초기화 버튼으로 수식을 다시 만들 수 있습니다.  
- If you make a mistake, use the reset button to start your expression over.
-
-- 총 10라운드 동안 플레이하며 **누적 점수**로 승패를 결정합니다.  
-   Play 10 rounds. The player with the highest total score wins.
-
----
-
-## 🧩 버전별 차이점 | Version Differences
-
-넘플 시리즈는 총 세 가지 버전으로 구성되어 있으며, 각 버전은 규칙과 난이도에 따라 차이가 있습니다.  
-The Numpple series includes three versions, each with different rules and difficulty levels.
-
-**넘플초**  
-가장 쉬운 버전으로, 1부터 20까지의 숫자카드가 제공되며 숫자 카드를 이어붙일 수 없습니다.  
-연산 기호는 +, − 만 제공됩니다.  
-**Numpple Cho** 
-the easy version.  Only + and − are allowed.  
-Number cards from 1 to 20 are provided, and you cannot connect number cards together.​​​​​​​​​​​​​​​​
+※ “Jam” indicates intermediate difficulty, “Up” indicates advanced/expert expansion.
 
 ---
 
-**넘플잼 (Numzzle Jam)**  
-연산 기호에 +, -, ×가  있습니다.  
-숫자 카드는 0~9까지의 숫자 카드를 이어붙여서 여러 자리 숫자를 만들 수 있습니다.  
-**Numpple jam**  
-The operation symbols available are +, -, and ×.
-Number cards can be connected together using digit cards from 0 to 9 to create multi-digit numbers.​​​​​​​​​​​​​​​​
+### 🃏 카드 사용 규칙에 따른 분류
+
+| 카드 사용 방식                 | 포함된 게임 종류                  |
+|----------------------------|------------------------------|
+| 모든 카드 사용                 | 넘즐 X, 넘플 X                |
+| 카드 일부만 사용하는 것 허용       | 넘즐, 넘플, 넘털      |
+| 여러 장으로 여러자리 숫자만들기 금지 | 넘즐초, 넘플초, 넘즐 X, 넘플 X           |
+| 여러 장으로 여러자리 숫자만들기 허용 | 넘즐잼, 넘즐, 넘즐업, 넘플잼, 넘플, 넘털    |
+
+### 🃏 Classification by Card Usage Rules
+
+|Card Usage Method             |Included Game Types             |
+|-----------|---------|
+|Must use all cards            |Numzzle X, Numpple X    |
+|Allowed to use only some cards|Numzzle, Numpple, Numtter      |
+|Multi-digit numbers prohibited|Numzzle Cho, Numpple Cho, Numzzle X, Numpple X  |
+|Multi-digit numbers allowed   |Numzzle Jam, Numzzle, Numzzle Up, Numpple Jam, Numpple, Numtter|
 
 ---
 
-**넘플 (Numpple)**  
-+, −, ×, ÷ 기호를 사용할 수 있고,  
-숫자카드를 이어붙여서 여러 자리 숫자를 만들 수 있습니다.
-**Numpple**  
-It uses +, −, ×, ÷ operators and   
-Card combinations are allowed.
+
+## 🌟 Soosooland - Puzzle Game Hub by Han Soosoo
+
+> "Learning through fun, and fun through learning."
+
+Explore more brain games and puzzles in **[Soosooland](https://soosooland.com)**    
+— a digital playground designed to improve memory, logic, and creativity while having fun!
+
+---
+## ⚠️ **Copyright Protection   
+
+이 저작물은 한국저작권위원회에 등록되어 법적 보호를 받습니다.    
+This project is registered with the Korea Copyright Commission.
+
+| 게임 | 등록번호 | 등록일 |
+|------|----------|--------|
+| 넘즐 (Numzzle) | C-2025-036386| 2025.09.11 |
+
+---
+### ✨ 자유롭게 하실 수 있는 것
+
+✅ **무료 플레이** - 언제든 게임을 즐기세요  
+✅ **공유하기** - 친구들에게 수수랜드를 추천해주세요  
+✅ **링크 공유** - SNS에 soosooland.com을 올려주세요  
+✅ **피드백** - 의견을 보내주시면 반영하겠습니다
+
+### ✨ What You Can Do
+
+✅ **Play for free** - Enjoy all games anytime  
+✅ **Share** - Tell your friends about Soosooland  
+✅ **Link** - Share soosooland.com on social media  
+✅ **Feedback** - Help us improve with your suggestions
 
 ---
 
-**넘플업 (Numpple Up)**는 가장 고급 버전으로,  
-+, −, ×, ÷에 더해 √(루트)도 사용할 수 있으며,전략적인 점수 계산이 필수입니다.  
-난이도는 높지만 수학적 사고력과 논리력을 최대한 자극합니다.  
-향후 개발 예정입니다.
-**Numpple Up** is the most advanced version.  
-It includes the √ (square root) operator and requires strategic score management.  
-It is designed to challenge both mathematical thinking and creativity at the highest level.
-This is planned for future development.​​​​​​​​​​​​​​​​
+### 🤝 허락이 필요한 경우
+
+📧 **다음의 경우 연락 주세요:**
+- 상업적 이용
+- 2차 창작 또는 변형
+- 재배포 또는 재게시
+- 교육기관 또는 단체 이용
+
+💌 협업과 파트너십은 언제나 환영합니다!  
+[문의하기](https://soosooland.com/Contact.html)
+
+### 🤝 Need Permission For
+
+📧 **Please contact me for:**
+- Commercial use or monetization
+- Creating derivative works
+- Redistribution or republishing
+- Educational or institutional use
+
+💌 I'm open to collaborations and partnerships!  
+[Contact me](https://soosooland.com/Contact.html)
+
+—-
+
+## Play Numpple : https://soosooland.com/numpple/
 
 ---
-
-각 버전은 난이도뿐 아니라 **연산 도구의 범위, 카드 사용 방식, 게임 자유도**에서도 차이를 보이며,  
-학습 단계나 실력에 따라 선택해 즐길 수 있도록 설계되었습니다.  
-Each version differs not only in difficulty, but also in available operations, card usage rules, and overall game flexibility.    
-allowing players to choose based on their skill and learning level.---
-
----
-Play Numpple : https://soosooland.com/numpple/
----
-
 ## 🌟 Soosooland - Puzzle Game Hub by Han Soosoo
 
  "Learning through fun, and fun through learning."
@@ -117,14 +152,11 @@ Explore more brain games and puzzles in **[Soosooland](https://soosooland.com/)*
 — a digital playground designed to improve memory, logic, and creativity while having fun!
 
 ---
-
-## 👤 만든 사람 | Credits
+### 👤 만든 사람 | Credits
 
 - 기획·개발 : 한수수  
-
-<p>ⓒ 2025 한수수. 이 게임의 모든 권리는 제작자인 한수수에게 있습니다.<br>
- 무단 복제, 배포, 2차 창작을 금합니다.</p>
+ⓒ 2025 한수수. 이 게임의 모든 권리는 제작자인 한수수에게 있습니다.
 
 - Created and Developed by Soosoo Han  
-<p>© 2025 Soosoo Han. All rights reserved.<br>
-    
+ⓒ 2025 Soosoo Han. All rights reserved.
+

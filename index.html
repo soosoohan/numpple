@@ -203,31 +203,30 @@
         word-wrap: break-word;
     }
 
-    .main-game-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 20px;
-        padding: 20px;
-    }
+.main-game-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;  /* 이 값을 20px → 30px 이상으로 늘려보세요 */
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+}
 
-    .main-game-button {
-        background: rgba(255,255,255,0.9);
-        color: #2e8b8b;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 10px;
-        font-size: clamp(1rem, 3vw, 1.3rem);
-        font-family: 'Pretendard', sans-serif;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        flex: 1;
-        min-width: 120px;
-        max-width: 200px;
-    }
-
+.main-game-button {
+    background: rgba(255,255,255,0.9);
+    color: #2e8b8b;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-family: 'Pretendard', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+}
     .main-game-button:hover {
         background: #f0f8ff;
         transform: translateY(-3px);
@@ -373,15 +372,15 @@
             <li>  게임하는 동안 계산 능력이 향상됩니다. </li>
         </ul>
 
-        <div class="button-container">
+        <div class="main-game-buttons">
             <button class="main-game-button" onclick="location.href='numpplecho-ko.html'">
-                넘플초 쉬움
+                넘플초<br>쉬움
             </button>
             <button class="main-game-button" onclick="location.href='numpplejam-ko.html'">
-                넘플잼 보통
+                넘플잼<br>보통
             </button>
             <button class="main-game-button" onclick="location.href='numpple-ko.html'">
-                넘플 어려움
+                넘플<br>어려움
             </button>
                         
 </div>
@@ -404,13 +403,13 @@
                 </ul>
 <div class="main-game-buttons">
                             <button class="main-game-button" onclick="location.href='numpplecho-en.html'">
-                        NUMPPLE CHO
+                        NUMPPLE CHO<br>easy
                     </button>
                     <button class="main-game-button" onclick="location.href='numpplejam-en.html'">
-                        NUMPPLE JAM
+                        NUMPPLE JAM<br>medium
                     </button>
                     <button class="main-game-button" onclick="location.href='numpple-en.html'">
-                        NUMPPLE
+                        NUMPPLE<br>hard
                     </button>
                  
             </div>

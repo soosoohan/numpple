@@ -78,10 +78,10 @@
     }
     .back-button {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 10px;
+        left: 10px;
         padding: 10px 20px;
-        font-size: 1em;
+        font-size: 0.9em;
         background-color: #FFD6BA;
         color: #7A2E2E;
         border: none;
@@ -121,8 +121,8 @@
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         z-index: 100;
-    }
-
+        max-width: 200px; /* 최대 너비 제한 */    
+     }
     .language-button {
         background: #2e8b8b;
         color: white;
@@ -132,7 +132,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-family: 'Pretendard', sans-serif;
-        font-size: clamp(0.8rem, 2vw, 1rem);
+        font-size: 1rem;
         transition: all 0.3s ease;
     }
 
@@ -173,7 +173,7 @@
     .game-description {
         flex: 1;
         color: #f0f8ff;
-        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        font-size: clamp(1rem, 2.3vw, 1.1rem);
         line-height: 1.4;
         margin-top: 20px;
         padding: 0 20px;
@@ -183,7 +183,7 @@
     .game-description h3 {
         color: #add8e6;
         margin-bottom: 15px;
-        font-size: clamp(1rem, 3vw, 1.3rem);
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
         border-bottom: 2px solid #add8e6;
         padding-bottom: 8px;
     }
@@ -289,11 +289,25 @@
             margin-top: 60px;
         }
 
+        .back-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
         .language-toggle {
-            position: static;
-            float: right;
-            margin-bottom: 30px;
-        }
+        top: 10px;
+        right: 10px;
+        padding: 6px;
+        max-width: 200px; /* 최대 너비 제한 */
+    }
+    
+        .language-button {
+        padding: 5px 8px;
+        font-size: 0.85rem;
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
 
         .games-hub-btn {
             position: static;

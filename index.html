@@ -355,7 +355,7 @@
     }
 </style>
 </head>
-<body>
+    <body onload="initLanguage()">
     <button class="back-button" onclick="location.href='https://soosooland.com/'">
     Soosooland </button>
 <div class="blackboard">
@@ -364,11 +364,7 @@
             <div class="language-toggle">
                 <button class="language-button active" onclick="toggleLanguage('ko')">한국어</button>
                 <button class="language-button" onclick="toggleLanguage('en')">English</button>
-            </div>
-
-  
-  
-        
+            </div>     
         <div class="game-description chalk-text" id="korean-description">
         <h1 class="chalk-text main-title">넘플</h1>
                 <h3>숫자 카드와 연산기호 카드로 수식을 만드세요.</h3>
@@ -452,9 +448,16 @@
             buttons[1].classList.add('active');
         }
     }
-    
+ function initLanguage() {
+  const saved = localStorage.getItem('soosoo-lang');
+  if (saved) {
+    toggleLanguage(saved); // 저장된 값 우선
+  } else {
+    const lang = navigator.language.startsWith('ko') ? 'ko' : 'en';
+    toggleLanguage(lang); // 브라우저 언어 감지
+  }
+}   
 </script>
-
 
 </body>
 </html>
